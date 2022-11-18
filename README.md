@@ -18,7 +18,7 @@ has_many:orders
 
 #itemテーブル
 
-| Column             | Type   | Options     |
+| Column             | Type   | Options     　　|
 | ------------------ | --------- | ----------- |
 | name               | string    | null: false |
 | text               | integer   | null: false |
