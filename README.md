@@ -4,31 +4,31 @@
 | ------------------ | ------ | ----------- |
 | nickname            | string | null: false |
 | e-mail             | string | null: false, unique: true|
-| password           | string | null: false |
+| encrypted_password           | string | null: false |
 | first_name         | string | null: false |
 | last_name          | string | null: false |
 | first_name_kana    | string | null: false |
 | last_name_kana     | string | null: false |
-| birthday           | datetime| null: false |
+| birthday           | date   | null: false |
 
 has_many:items
 has_many:orders
 
 
 
-#itemテーブル
+#itemsテーブル
 
 | Column             | Type   | Options     　　|
 | ------------------ | --------- | ----------- |
 | name               | string    | null: false |
-| text               | integer   | null: false |
-| category           | integer   | null: false |
+| text               | text      | null: false |
+| category_id        | integer   | null: false |
 | status_id          | integer   | null: false |
-| freight            | integer   | null: false |
+| freight_id         | integer   | null: false |
 | prefecture_id      | integer   | null: false |
-| ship_date          | integer   | null: false |
+| ship_date_id       | integer   | null: false |
 | price              | integer   | null: false |
-| user               | references| null: false |
+| user_id            | references| null: false |
 
 belongs_to:user
 has_one:order
