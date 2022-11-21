@@ -55,6 +55,6 @@ has_one:payment
 | block              | string       | null: false |
 | building           | string       |             |
 | phone              | string       | null: false |
-| orders             | references   | null: false, foreign_key: true|
+| order              | references   | null: false, foreign_key: true|
 
 belongs_to:order
