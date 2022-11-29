@@ -31,7 +31,7 @@ class Item < ApplicationRecord
     validates :freight_id
     validates :prefecture_id
     validates :ship_date_id
-    validates :price, numericality: { with: /\A[0-9]+\z/, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
+    validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
     validates :image
   end
 end
