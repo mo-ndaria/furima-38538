@@ -23,7 +23,7 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def edit
-    if @item.user_id == current_user.id
+    if @item.user == current_user
     else
       redirect_to root_path
     end
